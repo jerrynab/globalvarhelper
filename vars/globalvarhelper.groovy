@@ -1,5 +1,6 @@
 #!/usr/bin/env groovy
 
+@NonCPS
 def updateGlobalEnvVariable(String name, String value) {
     def globalNodeProperties = Jenkins.getInstance().getGlobalNodeProperties()
     def envVarsNodePropertyList = globalNodeProperties.getAll(hudson.slaves.EnvironmentVariablesNodeProperty.class)
